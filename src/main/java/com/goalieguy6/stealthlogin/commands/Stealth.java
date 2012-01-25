@@ -9,6 +9,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+/**
+ * Command handler to manually display join/quit messages.
+ * 
+ * @author GoalieGuy6 <goalieguy6@goalieguy6.com>
+ */
 public class Stealth implements CommandExecutor {
 	
 	private final StealthLogin plugin;

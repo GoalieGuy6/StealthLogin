@@ -1,5 +1,10 @@
 package com.goalieguy6.stealthlogin.util;
 
+/**
+ * Message util to parse ampersand color codes
+ * 
+ * @author GoalieGuy6 <goalieguy6@goalieguy6.com>
+ */
 public class Message {
 	
 	public static String stripColor(String message) {

@@ -13,6 +13,11 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * Plugin to hide player join/quit/kick messages
+ * 
+ * @author GoalieGuy6 <goalieguy6@goalieguy6.com>
+ */
 public class StealthLogin extends JavaPlugin {
 	
 	public String name; // "StealthLogin"

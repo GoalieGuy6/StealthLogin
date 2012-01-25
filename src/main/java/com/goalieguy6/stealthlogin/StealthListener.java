@@ -8,6 +8,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerKickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+/**
+ * Listener for player login/quit/kick events to disable messages
+ * 
+ * @author GoalieGuy6 <goalieguy6@goalieguy6.com>
+ */
 public class StealthListener implements Listener {
 	
 	private final StealthLogin plugin;

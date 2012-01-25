@@ -3,6 +3,8 @@ main: com.goalieguy6.stealthlogin.StealthLogin
 version: ${project.version}
 author: GoalieGuy6
 description: Hide login and logout messages
+website: http://www.goalieguy6.com/
+
 commands:
     stealthlogin:
         description: Display a login/logout message manually
