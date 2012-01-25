@@ -1,0 +1,19 @@
+name: StealthLogin
+main: com.goalieguy6.stealthlogin.StealthLogin
+version: ${project.version}
+author: GoalieGuy6
+description: Hide login and logout messages
+commands:
+    stealthlogin:
+        description: Display a login/logout message manually
+        aliases: [stealth, sl]
+        usage: |
+               /<command> <login/logout>
+
+permissions:
+    stealthlogin.stealth:
+        description: Login/logout message are hidden automatically
+        default: false
+    stealthlogin.display:
+        description: Permission to manually display login/logout message
+        default: false
