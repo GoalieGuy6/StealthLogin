@@ -1,7 +1,7 @@
 name: StealthLogin
 main: com.goalieguy6.stealthlogin.StealthLogin
 version: ${project.version}
-author: GoalieGuy6
+author: [Cubeville, GoalieGuy6]
 description: Hide login and logout messages
 website: http://www.goalieguy6.com/
 
@@ -13,6 +13,11 @@ commands:
                /<command> <login/logout>
 
 permissions:
+    stealthlogin.*:
+        default: false
+        children:
+            stealthlogin.stealth: true
+            stealthlogin.display: false
     stealthlogin.stealth:
         description: Login/logout message are hidden automatically
         default: false
