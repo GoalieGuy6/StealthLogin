@@ -53,10 +53,10 @@ public class Stealth implements CommandExecutor {
 			message = "&cInvalid syntax. /" + label + " <join/quit>";
 			player.sendMessage(Message.parseColor(message));
 		} else if (args[0].equalsIgnoreCase("join") || args[0].equalsIgnoreCase("login")) {
-			message = "&e" + name + " joined the game.";
+			message = plugin.getJoinMessage().replace("%player%", name);
 			plugin.getServer().broadcastMessage(Message.parseColor(message));
 		} else if (args[0].equalsIgnoreCase("quit") || args[0].equalsIgnoreCase("logout")) {
-			message = "&e" + name + " left the game.";
+			message = plugin.getQuitMessage().replace("%player%", name);
 			plugin.getServer().broadcastMessage(Message.parseColor(message));
 		} else {
 			message = "&cInvalid syntax. /" + label + " <join/quit>";

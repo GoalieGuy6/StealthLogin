@@ -29,6 +29,9 @@ public class StealthLogin extends JavaPlugin {
 	private boolean displayName;
 	private boolean hideKick;
 	
+	private String joinMessage;
+	private String quitMessage;
+	
 	private StealthListener listener;
 
 	public void onDisable() {
@@ -85,6 +88,8 @@ public class StealthLogin extends JavaPlugin {
 		permissions = config.getBoolean("permissions", true);
 		displayName = config.getBoolean("display-name", false);
 		hideKick = config.getBoolean("silentkick", true);
+		joinMessage = config.getString("join-message");
+		quitMessage = config.getString("quit-message");
 	}
 	
 	private void createConfig() {
@@ -104,19 +109,17 @@ public class StealthLogin extends JavaPlugin {
 		config.options().header("StealthLogin Config\n" +
 				"\n permissions: Whether or not to use superperms (OP only if false)" +
 				"\n display-name: Whether or not to use display names in the login/logout message" +
-				"\n silentkick: Whether or not to hide leave messages when kicked");
-		
-		if (!config.isSet("permissions")) {
-			config.set("permissions", true);
-		}
-		
-		if (!config.isSet("display-name")) {
-			config.set("display-name", false);
-		}
+				"\n silentkick: Whether or not to hide leave messages when kicked" +
+				"\n join-message: The format of manually displayed join messages" +
+				"\n quit-message: The format of manually displayed quit messages");
 		
 		config.addDefault("permissions", true);
 		config.addDefault("display-name", false);
 		config.addDefault("silentkick", true);
+		config.addDefault("join-message", "&e%player% joined the game.");
+		config.addDefault("quit-message", "&e%player% left the game.");
+		
+		config.options().copyDefaults(true);
 		
 		try {
 			config.save(file);
@@ -140,6 +143,14 @@ public class StealthLogin extends JavaPlugin {
 	
 	public boolean hideKick() {
 		return hideKick;
+	}
+	
+	public String getJoinMessage() {
+		return joinMessage;
+	}
+	
+	public String getQuitMessage() {
+		return quitMessage;
 	}
 
 }
