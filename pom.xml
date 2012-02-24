@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.goalieguy6</groupId>
   <artifactId>StealthLogin</artifactId>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
   <name>StealthLogin</name>
   
   <repositories>
@@ -16,7 +16,7 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
-      <version>1.1-R1</version>
+      <version>1.1-R4</version>
     </dependency>
   </dependencies>
   
