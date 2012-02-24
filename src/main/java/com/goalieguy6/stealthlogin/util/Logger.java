@@ -10,31 +10,29 @@ import com.goalieguy6.stealthlogin.StealthLogin;
 public class Logger {
 	
 	private static java.util.logging.Logger logger;
-	private static String prefix;
 	
 	public static void setup(StealthLogin plugin) {
-		logger = java.util.logging.Logger.getLogger("Minecraft");
-		prefix = "[" + plugin.getDescription().getName() + "] ";
+		logger = plugin.getLogger();
 	}
 	
 	public static void config(String message) {
-		logger.config(prefix + message);
+		logger.config(message);
 	}
 	
 	public static void info(String message) {
-		logger.info(prefix + message);
-	}
-	
-	public static void raw(String message) {
 		logger.info(message);
 	}
 	
+	public static void raw(String message) {
+		System.out.println(message);
+	}
+	
 	public static void severe(String message) {
-		logger.severe(prefix + message);
+		logger.severe(message);
 	}
 	
 	public static void warning(String message) {
-		logger.warning(prefix + message);
+		logger.warning(message);
 	}
 
 }

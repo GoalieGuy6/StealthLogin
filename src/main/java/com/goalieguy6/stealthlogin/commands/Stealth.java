@@ -1,7 +1,6 @@
 package com.goalieguy6.stealthlogin.commands;
 
 import com.goalieguy6.stealthlogin.StealthLogin;
-import com.goalieguy6.stealthlogin.util.Logger;
 import com.goalieguy6.stealthlogin.util.Message;
 
 import org.bukkit.command.Command;
@@ -27,8 +26,14 @@ public class Stealth implements CommandExecutor {
 			return false;
 		}
 		
+		if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
+			plugin.loadConfig();
+			sender.sendMessage(Message.parseColor("StealthLogin config reloaded."));
+			return true;
+		}
+		
 		if (!(sender instanceof Player)) {
-			Logger.raw("Only players can display join/quit messages.");
+			sender.sendMessage("Invalid syntax. /" + label + " reload");
 			return true;
 		}
 		

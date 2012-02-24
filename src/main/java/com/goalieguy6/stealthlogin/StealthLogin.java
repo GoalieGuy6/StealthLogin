@@ -38,8 +38,6 @@ public class StealthLogin extends JavaPlugin {
 		getCommand("stealthlogin").setExecutor(null);
 		listener = null;
 		config = null;
-
-		Logger.info("Version " + this.version + " disabled.");
 	}
 
 	public void onEnable() {
@@ -48,7 +46,6 @@ public class StealthLogin extends JavaPlugin {
 		this.version = pdfFile.getVersion();
 		
 		Logger.setup(this);
-		Logger.info("Initializing version " + this.version + ".");
 		
 		loadConfig();
 		setupCommands();
@@ -66,7 +63,7 @@ public class StealthLogin extends JavaPlugin {
 		}
 	}
 	
-	private void loadConfig() {
+	public void loadConfig() {
 		config = new YamlConfiguration();
 		createConfig();
 		
