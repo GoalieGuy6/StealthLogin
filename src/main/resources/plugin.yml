@@ -17,7 +17,7 @@ permissions:
         default: false
         children:
             stealthlogin.stealth: true
-            stealthlogin.display: false
+            stealthlogin.display: true
     stealthlogin.stealth:
         description: Login/logout message are hidden automatically
         default: false
